@@ -21,12 +21,12 @@ This provides leadership with a clear view of which product categories and wareh
 
 ##  What This Project Achieved (Using MySQL Only)
 
-✔ Filtered the sales table to include **only wholesale orders**  
-✔ Extracted and labels the **month** from the order date  
-✔ Grouped sales by **product line, month, and warehouse**  
-✔ Calculated **net revenue** after subtracting payment fees  
-✔ Ordered the results for easier reporting  
-✔ Exported the final SQL output into a structured CSV file  
+-Filtered the sales table to include **only wholesale orders**  
+-Extracted and labels the **month** from the order date  
+-Grouped sales by **product line, month, and warehouse**  
+-Calculated **net revenue** after subtracting payment fees  
+-Ordered the results for easier reporting  
+-Exported the final SQL output into a structured CSV file  
 
 
 ##  Dataset Structure (SQL Table)
