@@ -29,7 +29,9 @@ This provides leadership with a clear view of which product categories and wareh
 ## Files Included
 
 -notebook.ipynb              →    SQL notebook containing the analysis
+
 -wholesale_net_revenue.csv   →    Exported results of the SQL query
+
 -README.md                   →    Project documentation
 
 ##  Dataset Structure (SQL Table)
