@@ -1,5 +1,5 @@
 # Analyzing-Motorcycle-Part-Sales-Using-SQL
-# Wholesale Net Revenue Analysis (SQL)
+
 
 ##  Project Summary
 
