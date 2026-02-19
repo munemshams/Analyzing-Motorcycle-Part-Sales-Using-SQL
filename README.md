@@ -17,8 +17,6 @@ net_revenue = SUM(total) - SUM(payment_fee)
 
 This provides leadership with a clear view of which product categories and warehouses generate the most wholesale revenue after payment-processing costs.
 
-
-
 ##  What This Project Achieved (Using MySQL Only)
 
 -Filtered the sales table to include **only wholesale orders**  
@@ -28,55 +26,19 @@ This provides leadership with a clear view of which product categories and wareh
 -Ordered the results for easier reporting  
 -Exported the final SQL output into a structured CSV file  
 
-
-##  Dataset Structure (SQL Table)
-
-The analysis uses one SQL table: **`sales`**
-
-| Column        | Type     | Description |
-|---------------|----------|-------------|
-| order_number  | VARCHAR  | Unique order ID |
-| date          | DATE     | Order date (June–August 2021) |
-| warehouse     | VARCHAR  | North, Central, or West |
-| client_type   | VARCHAR  | Wholesale or Retail |
-| product_line  | VARCHAR  | Product category |
-| quantity      | INT      | Number of items |
-| unit_price    | FLOAT    | Price per item |
-| total         | FLOAT    | Total sale amount |
-| payment       | VARCHAR  | Payment method |
-| payment_fee   | FLOAT    | Fee charged for payment processing |
-
----
-
-## SQL Query Used in the Analysis
-
-```sql
-SELECT
-    product_line,
-    CASE
-        WHEN EXTRACT('month' FROM date) = 6 THEN 'June'
-        WHEN EXTRACT('month' FROM date) = 7 THEN 'July'
-        WHEN EXTRACT('month' FROM date) = 8 THEN 'August'
-    END AS month,
-    warehouse,
-    SUM(total) - SUM(payment_fee) AS net_revenue
-FROM sales
-WHERE client_type = 'Wholesale'
-GROUP BY
-    product_line,
-    month,
-    warehouse
-ORDER BY
-    product_line,
-    month,
-    net_revenue DESC;
-
-
 ## Files Included
 
 ├── notebook.ipynb               # SQL notebook containing the analysis
 ├── wholesale_net_revenue.csv    # Exported results of the SQL query
 └── README.md                    # Project documentation
+
+##  Dataset Structure (SQL Table)
+
+The analysis uses one SQL table titled "sales".
+
+## SQL Query Used in the Analysis
+
+An SQL Query was used to obtain our output which are both included in the Project Notebook.
 
 ## Results Overview (CSV Output)
 
@@ -85,5 +47,7 @@ The final CSV contains the computed fields:
 product_line, month, warehouse, net_revenue
 
 Each row represents one product line in one warehouse for one month.
+
+
 
 
