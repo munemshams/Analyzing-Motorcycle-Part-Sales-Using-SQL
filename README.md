@@ -32,6 +32,8 @@ This provides leadership with a clear view of which product categories and wareh
 
 -wholesale_net_revenue.csv   →    Exported results of the SQL query
 
+-wholesale_net_revenue.sql   →    Raw SQL query used to generate the results
+
 -README.md                   →    Project documentation
 
 ##  Dataset Structure (SQL Table)
